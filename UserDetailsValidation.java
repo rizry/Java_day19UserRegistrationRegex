@@ -26,7 +26,7 @@ public class UserDetailsValidation {
   }
 
   public static void isValidPassword(String pass) {
-    regex = "^(?=.*[A-Z])(?=.*\\d)\\w{8,}$";
+    regex = "^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$";
     if (validate(regex, pass)) System.out.println("valid");
     else System.out.println("invalid");
   }
