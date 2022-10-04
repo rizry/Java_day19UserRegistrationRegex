@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class UserDetailsValidation {
 
   static String regex;
-  
+
   public static void isValidName(String name) {
     regex = "^[A-Z]{1}[a-z]{2,}$";
     if (validate(regex, name)) System.out.println("valid");
@@ -20,9 +20,14 @@ public class UserDetailsValidation {
   }
 
   public static void isValidPhoneNumber(String phNum) {
-    System.out.println(phNum);
     regex = "^[0-9]{1,3}(-[0-9]{1,3})?\\s{0,3}[6-9]{1}[0-9]{9}$";
     if (validate(regex, phNum)) System.out.println("valid");
+    else System.out.println("invalid");
+  }
+
+  public static void isValidPassword(String pass) {
+    regex = "^\\w{8,}$";
+    if (validate(regex, pass)) System.out.println("valid");
     else System.out.println("invalid");
   }
 

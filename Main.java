@@ -11,6 +11,7 @@ public class Main {
     checkLastName();
     checkEmail();
     checkPhoneNumber();
+    checkPassword();
 
   }
 
@@ -37,5 +38,11 @@ public class Main {
     SC.nextLine();
     String phNum = SC.nextLine();
     UserDetailsValidation.isValidPhoneNumber(phNum);
+  }
+
+  public static void checkPassword() {
+    System.out.print("Enter password: ");
+    String password = SC.next();
+    UserDetailsValidation.isValidPassword(password);
   }
 }
