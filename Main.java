@@ -10,6 +10,7 @@ public class Main {
     checkFirstName();
     checkLastName();
     checkEmail();
+    checkPhoneNumber();
 
   }
 
@@ -29,5 +30,12 @@ public class Main {
     System.out.print("Enter an email: ");
     String email = SC.next();
     UserDetailsValidation.isValidEmail(email);
+  }
+
+  public static void checkPhoneNumber() {
+    System.out.print("Enter a phone number: ");
+    SC.nextLine();
+    String phNum = SC.nextLine();
+    UserDetailsValidation.isValidPhoneNumber(phNum);
   }
 }
