@@ -9,6 +9,7 @@ public class Main {
     System.out.println("--Welcome to User Registration Problem--");
     checkFirstName();
     checkLastName();
+    checkEmail();
 
   }
 
@@ -24,4 +25,9 @@ public class Main {
     UserDetailsValidation.isValidName(lName);
   }
 
+  public static void checkEmail() {
+    System.out.print("Enter an email: ");
+    String email = SC.next();
+    UserDetailsValidation.isValidEmail(email);
+  }
 }
