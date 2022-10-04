@@ -8,13 +8,20 @@ public class Main {
   public static void main(String[] args) {
     System.out.println("--Welcome to User Registration Problem--");
     checkFirstName();
+    checkLastName();
 
   }
 
   public static void checkFirstName() {
     System.out.print("Enter first name: ");
     String fName = SC.next();
-    UserDetailsValidation.isValidFirstName(fName);
+    UserDetailsValidation.isValidName(fName);
+  }
+
+  public static void checkLastName() {
+    System.out.print("Enter last name: ");
+    String lName = SC.next();
+    UserDetailsValidation.isValidName(lName);
   }
 
 }
